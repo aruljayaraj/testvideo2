@@ -1,0 +1,459 @@
+
+$wizard-color-neutral: #ccc !default;
+$wizard-color-active: #4183d7 !default;
+$wizard-color-complete: #87d37c !default;
+$wizard-step-width-height: 64px !default;
+$wizard-step-font-size: 24px !default;
+
+:root{
+    a{
+        outline: none !important;
+    }
+}
+.overlay{
+    position: fixed;
+    left:0;
+    top:0px;
+    height:100%;
+    width:100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index:9;
+}
+.invalid-feedback {
+    width: 100%;
+    margin-top: .25rem;
+    font-size: 80%;
+    color: #dc3545;
+}
+.fw-bold{
+    font-weight: bold !important;
+}
+.fs-10{
+    font-size: 10px !important;
+}
+.fs-11{
+    font-size: 11px !important;
+}
+.fs-12{
+    font-size: 12px !important;
+}
+.fs-13{
+    font-size: 13px !important;
+}
+.fs-14{
+    font-size: 14px !important;
+}
+.fs-15{
+    font-size: 15px !important;
+}
+.fs-16{
+    font-size: 16px !important;
+}
+.fs-17{
+    font-size: 17px !important;
+}
+.fs-18{
+    font-size: 18px !important;
+}
+.fs-19{
+    font-size: 19px !important;
+}
+.fs-20{
+    font-size: 20px !important;
+}
+.mt-neg-2{
+    margin-top: -2px;
+}
+.mt-neg-4{
+    margin-top: -4px;
+}
+.mt-neg-6{
+    margin-top: -6px;
+}
+.ew-100, .tox-tinymce{
+    width: 100% !important;
+}
+.cursor{
+    cursor: pointer !important;
+}
+.no-cursor{
+    cursor: default !important;
+}
+a{
+    text-decoration: none !important;
+}
+.anchor-link{
+    cursor: pointer !important;
+    color: var(--app-link);
+}
+.anchor-white{
+    cursor: pointer !important;
+    i{
+        margin: 12px 0 0 15px;
+    }
+    &:hover{
+        background-color: #d7efcc;
+        i{
+           color: #47812c;
+        }
+    }
+}
+.anchor-white-ellipsis{
+    cursor: pointer !important;
+    i{
+        margin: 12px 0 0 13px;
+    }
+    &:hover{
+        background-color: #d7efcc;
+        i{
+           color: #47812c;
+        }
+    }
+}
+.router-link-anchor{
+    cursor: pointer !important;
+    width: 32px;
+    height: 32px;
+    /*margin-top: -5px;*/
+    i{
+        margin: 8px 0 0 9px; // 9
+    }
+    &:hover{
+        background-color: #d7efcc;
+        border-radius: 50%;
+        i{
+           color: #47812c;
+        }
+    }
+    i.fa-shopping-cart{
+        margin: 8px 0 0 5px !important;
+    }
+}
+
+.router-link-anchor-vertical{
+    cursor: pointer !important;
+    width: 32px;
+    height: 32px;
+    margin-top: -5px;
+    i{
+        margin: 8px 0 0 14px;
+    }
+    &:hover{
+        background-color: #d7efcc;
+        border-radius: 50%;
+        i{
+           color: #47812c;
+        }
+    }
+}
+.green{
+    color: var(--app-greenbg);
+}
+.whitebg{
+    background-color: #fff;
+}
+.gray{
+    color: var(--app-gray);
+}
+.gray-medium{
+    color: #737373;
+}
+.blue{
+    color: $wizard-color-active;
+}
+.red{
+    color: #721c24;
+}
+.external_text{
+    p{
+        margin-bottom: 16px;
+    }
+}
+p.textbold{
+    color: #737373;
+    line-height: 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: justify;
+    font-family: 'Roboto-Bold';
+}
+.alert {
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    border-radius: .25rem;
+}
+.alert-primary {
+    color: #004085;
+    background-color: #cce5ff;
+    border-color: #b8daff;
+}
+.alert-secondary {
+    color: #383d41;
+    background-color: #e2e3e5;
+    border-color: #d6d8db;
+}
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+.alert-warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+.alert-info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+}
+.location_loc{
+    font-weight: bold;
+    color: var(--location_loc);
+}
+.location_reg{
+    font-weight: bold;
+    color: var(--location_reg);
+}
+.location_nat{
+    font-weight: bold;
+    color: var(--location_nat);
+}
+.location_int{
+    font-weight: bold;
+    color: var(--location_int);
+}
+.status_pending{
+    font-weight: bold;
+    color: var(--status_pending);
+}
+.status_revised{
+    font-weight: bold;
+    color: var(--status_revised);
+}
+.status_approved{
+    font-weight: bold;
+    color: var(--status_approved);
+}
+.status_cancelled{
+    font-weight: bold;
+    color: var(--status_cancelled);
+}
+.status_withdrawn{
+    font-weight: bold;
+    color: var(--status_withdrawn);
+}
+.status_completed{
+    font-weight: bold;
+    color: var(--status_completed);
+}
+
+/** Step Indicator start */
+.step-indicator {
+    border-collapse: separate;
+    display: table;
+    margin-left: 0px;
+    position: relative;
+    table-layout: fixed;
+    text-align: center;
+    vertical-align: middle;
+    padding-left: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    li {
+      display: table-cell;
+      position: relative;
+      float: none;
+      padding: 0;
+      width: 1%;
+      
+      &:after {
+        background-color: $wizard-color-neutral;
+        content: "";
+        display: block;
+        height: 1px;
+        position: absolute;
+        width: 100%;
+        top: calc($wizard-step-width-height/2);
+      }
+
+      &:after {
+        left: 50%;
+      }
+
+      &:last-child {
+        &:after {
+          display: none;
+        }
+      }
+
+      &.active {
+        .step {
+          border-color: $wizard-color-active;
+          color: $wizard-color-active;
+        }
+
+        .caption {
+          color: $wizard-color-active;
+        }
+      }
+
+      &.complete {
+        &:after {
+          background-color: $wizard-color-complete;
+        }
+
+        .step {
+          border-color: $wizard-color-complete;
+          color: $wizard-color-complete;
+        }
+
+        .caption {
+          color: $wizard-color-complete;
+        }
+      }
+    }
+
+    .step {
+      background-color: #fff;
+      border-radius: 50%;
+      border: 1px solid $wizard-color-neutral;
+      color: $wizard-color-neutral;
+      font-size: $wizard-step-font-size;
+      height: $wizard-step-width-height;
+      line-height: $wizard-step-width-height;
+      margin: 0 auto;
+      position: relative;
+      width: $wizard-step-width-height;
+      z-index: 1;
+      outline: none !important;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .caption {
+      color: $wizard-color-neutral;
+      padding: 11px 16px;
+    }
+  }
+/** Step Indicator end */
+.card-custom-title{
+    font-size: 16px;
+    font-weight: bold !important;
+    color: #737373 !important;
+}
+.page-title{
+    font-size: 20px;
+    color: var(--app-text) !important;
+    font-weight: bold !important;
+}
+.error{
+    color: #dc3545 !important;
+}
+.roundcorner{
+    border-radius: 5px;
+}
+.formInput{
+    border: 1px solid hsl(0,0%, 70%) !important;
+    border-radius: 3px !important;
+    padding: 10px;
+}
+
+.side-ads-container{
+    margin:10px 0px;
+    padding:6px;
+    .aditem{
+      padding:0;
+      margin:0 0 20px 0;
+      position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        border-radius: 0.25rem;
+      .adheader{
+        padding: 8px 12px;
+        background-color: #D3D5D6;
+        // background-color: '#E9E7E7';
+        text-transform: capitalize !important;
+      }
+    }
+}
+
+// Crop container grey background remove
+.cropper-container{
+    .cropper-modal {
+        background-color: #fff !important;
+        opacity: 0.5;
+    }
+}
+
+// Popover Positioning
+.profiles-list-popover.sc-ion-popover-md-h {
+    --width: 300px !important;
+}
+
+/*
+ * This adds a scroll bar to ionic alerts
+ */
+ .alert-radio-group::-webkit-scrollbar, .alert-checkbox-group::-webkit-scrollbar {
+    width: 0.7em;
+    display: block !important;
+}
+
+.alert-radio-group::-webkit-scrollbar-track, .alert-checkbox-group::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.alert-radio-group::-webkit-scrollbar-thumb, .alert-checkbox-group::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+
+/* For Image Crop Modal Resize */
+// .view-modal-wrap{
+//     border: 4px solid red;
+//     .modal-wrapper {
+//         border: 4px solid green;
+//         height: 80% !important;
+//         width: 80% !important;
+//     }
+// }
+
+.location-text {
+    font-family: SignPainter-HouseScript;
+    font-size: 24px;
+}
+.btn-round {
+    background-color: var(--ion-color-yellow);
+    border-radius: 5px;
+    color: #000;
+    padding: 6px;
+}
+.ion-page {
+    --ion-background-color: var(--app-graybg);
+}
+

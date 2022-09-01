@@ -1,0 +1,154 @@
+.location-subtext {
+  font-size: 18px;
+}
+.segment-button-checked ::ng-deep{
+  background-color: #2D303A;
+}
+.main-toolbar {
+  .login-btn-wrap {
+    background-color: #fff;
+    margin: 0;
+    padding: 6px;
+  }
+  .btn-round-icon {
+    background-color: var(--ion-color-yellow);
+    border-radius: 5px;
+    color: #000;
+    cursor: pointer;
+    padding: 6px 0;
+  }
+}
+#left-overlay-sidebar {
+  display: none;
+  width: 240px;
+  position: fixed;
+  top: 44px;
+  bottom: 44px;
+  left: 0;
+  z-index: 999;
+  -ms-overflow-y: auto;
+  overflow-y: auto;
+  background-color: var(--app-sidebar-bg-color);
+  color: #fff;
+
+  &.main-push-right{
+    display:block;
+  }
+  ion-content{
+    --ion-background-color: var(--app-sidebar-bg-color);
+    color: #fff;  
+  }
+}
+#right-overlay-sidebar {
+  display: none;
+  width: 240px;
+  position: fixed;
+  top: 44px;
+  /* bottom: 88px;*/
+  bottom: 142px;
+  right: 0;
+  z-index: 999;
+  -ms-overflow-y: auto;
+  overflow-y: none;
+  background-color: var(--app-sidebar-bg-color);
+  color: #fff;
+
+  &.main-push-left{
+    display:block;
+  }
+  ion-content{
+    --ion-background-color: var(--app-sidebar-bg-color);
+    color: #fff;  
+    // --overflow: hidden;
+    --overflow-y: auto;
+  }
+  .custom-list-sidemenu{
+    .custom-list-header{
+        font-size: 15px;
+        padding-left: 32px;
+        background-color: var(--menu_sub_header);
+        color: #fff;
+    }
+    .custom-list-item{
+        padding-left: 16px;
+        font-size: 14px;
+        background-color: var(--menu_sub_item);
+        &:hover{
+          background-color: #C4C4C4;
+        }
+    }
+  }
+}
+// Firefox only target
+@-moz-document url-prefix() {
+  #right-overlay-sidebar {
+    bottom: 144px;
+  }
+}
+#overlay.main-push-right, #overlay.main-push-left{
+  position: fixed;
+  left:0;
+  top:0px;
+  height:100%;
+  width:100%;
+  background-color: var(--app-overlay-bg-color);
+  z-index:9;
+}
+.notify-icon-wrap{
+  /*margin-right: 15px !important;*/
+  /*padding-right: 0 !important;*/
+  ion-badge{
+    position: absolute;
+    right: -5px; 
+    top: 0px;
+  }
+}
+
+@media (max-width: 575.98px) { 
+  #right-overlay-sidebar {
+    bottom: 144px;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) { 
+  #right-overlay-sidebar {
+    bottom: 188px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  // .msidebar-overlay.main-push-right{
+  //     position: fixed;
+  //     left:0;
+  //     top:0;
+  //     height:100%;
+  //     width:100%;
+  //     background-color: rgba(0,0,0,0.6);
+  //     z-index:9;
+  // }
+}
+
+@media screen and (max-width: 992px) {
+  .visible-md {
+      display: block;
+  }
+  .hidden-sm {
+      display: none;
+  }
+  .visible-sm {
+      display: block;
+  }
+  .nav-brand {
+      width: 100%;
+  }
+  //  .msidebar-overlay.main-push-right{
+  //       position: fixed;
+  //       left:0;
+  //       top:44px;
+  //       height:100%;
+  //       width:100%;
+  //       background-color: rgba(0,0,0,0.6);
+  //       z-index:9;
+  //   }
+}

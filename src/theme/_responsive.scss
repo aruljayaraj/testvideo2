@@ -1,0 +1,105 @@
+// Extra small  devices
+@media (max-width: 575.98px) { 
+    .hidden-xs {
+        display: none !important;
+    }
+    .page-title{
+        font-size: 16px;
+    }
+    .card-custom-title{
+        font-size: 15px !important;
+    }
+    .general-card{
+        width: 90%;
+        margin: 0 auto;
+    }
+ }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .hidden-sm {
+        display: none !important;
+    }
+    .page-title{
+        font-size: 16px;
+    }
+    .card-custom-title{
+        font-size: 15px !important;
+    }
+    .general-card{
+        width: 90%;
+        margin: 0 auto;
+    }
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .hidden-md {
+        display: none !important;
+    }
+    .view-modal-wrap {
+        .modal-wrapper{
+            width: 90% !important;
+            height: 85% !important;  // 85%
+            form{
+                height: 100%; 
+                margin-bottom: 50px;
+            }
+        }
+    }
+    .general-card{
+        width: 80%;
+        margin: 0 auto;
+    }
+ }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    .hidden-lg {
+        display: none !important;
+    }
+    .view-modal-wrap {
+        .modal-wrapper{
+            width: 90% !important;  
+            height: 85% !important; // 85%
+            form{
+                height: 100%; 
+                margin-bottom: 50px;
+            }
+        }
+    }
+    .general-card{
+        width: 70%;
+        margin: 0 auto;
+    }
+ }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+    .hidden-xl {
+        display: none !important;
+    }
+    form ion-label{
+        font-size: 18px !important;
+        ion-text {
+            padding-left: 4px;
+            font-size: 20px !important;
+        }
+    }
+    .view-modal-wrap {
+        .modal-wrapper{
+            width: 80% !important;  
+            height: 85% !important; // 85%
+            form{
+                height: 100%; 
+                margin-bottom: 50px;
+            }
+        }
+    }
+    .general-card{
+        width: 70%;
+        margin: 0 auto;
+    }
+ }
+
+

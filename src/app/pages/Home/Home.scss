@@ -1,0 +1,173 @@
+.homepage {
+  --ion-background-color: var(--app-mainbg);
+  ion-content {
+    ion-toolbar {
+      background: translucent; 
+      --min-height: 42px;
+      .filter-toolbar{
+        background: #fff;
+        padding: 3px 4px;
+        ion-segment-button {
+          // --background-checked: var(--ion-color-appbg) !important;
+          --color-checked: var(--ion-color-appbg-contrast);
+          --indicator-color : transparent!important;
+        }
+        .tb-item{
+          height: 36px;
+          min-width: auto !important;
+          &::before{
+            border-left: none !important;
+          }
+        }
+      }
+      
+    }
+  }
+  .home-container{
+    background-color: #F2F2F2;
+    /*.filter-container{
+        display: flex;
+        flex-wrap: wrap;
+      .space-between { 
+        justify-content: space-between; 
+      }  
+      .home-item {
+        margin: 10px;
+        padding: 0 !important;
+        // flex: 20%;
+        flex: 40%;
+        animation: fadeIn 5s;
+      }
+      .ion-hide{
+        animation: fadeOut 5s;
+      }
+    }*/
+    .filter-container{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 47%);
+      justify-content: space-between;
+      // grid-gap: 1rem;
+      
+      .home-item {
+        margin: 12px auto;
+        padding: 0 !important;
+        min-height: 350px;
+        background: #fff;
+        
+        p{
+          color: var(--app-link);
+        }
+      }
+      
+    }
+    .ads-container{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; 
+      margin:10px 0;
+      padding:0;
+      .aditem{
+        padding:0;
+        margin:0;
+        flex: 40%;
+        .adheader{
+          padding: 8px 12px;
+          background-color: #D3D5D6;
+          // background-color: '#E9E7E7';
+          text-transform: capitalize !important;
+        }
+      }
+    }
+  }
+  
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { 
+  .homepage {
+    ion-content {
+      ion-toolbar {
+        --min-height: 46px;
+      }
+    }  
+    .home-container{  
+      .filter-container{
+        grid-template-columns: repeat(auto-fill, 32%);
+      }
+      .ads-container{
+        .aditem{
+          &:nth-child(2){
+            margin-left: 15px;
+          }
+        }
+      }
+    }
+  }
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+  .homepage {
+    ion-content {
+      ion-toolbar {
+        --min-height: 42px;
+      }
+    } 
+    .home-container{
+      .filter-container{
+        grid-template-columns: repeat(auto-fill, 32%);
+      }
+      .ads-container{
+        .aditem{
+          &:nth-child(2){
+            margin-left: 15px;
+          }
+        }
+      }
+    }
+  }
+ }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { 
+  .homepage {
+    .home-container{
+      .filter-container{
+        grid-template-columns: repeat(auto-fill, 32%);
+      }
+      .ads-container{
+        .aditem{
+          &:nth-child(2){
+            margin-left: 15px;
+          }
+        }
+      }
+    }
+  }
+ }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+  .homepage {
+    .home-container{
+      .filter-container{
+        grid-template-columns: repeat(auto-fill, 24%);
+      }
+    }
+  }
+ }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) { 
+  .homepage {
+    .filter-container{
+      .filter-container{
+        grid-template-columns: repeat(auto-fill, 18.5%);
+      }
+    }
+  }
+}
+::part(indicator-background) {
+  background-color: var(--ion-color-appbg);
+  
+}
